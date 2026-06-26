@@ -1,0 +1,25 @@
+# Append these to build/conf/local.conf (created by oe-init-build-env).
+# Yocto Scarthgap 5.0 / qemux86-64 homelab build.
+
+MACHINE = "qemux86-64"
+
+# --- Parallelism: match to the build host's core count ---
+BB_NUMBER_THREADS = "24"
+PARALLEL_MAKE = "-j 24"
+
+# --- Make git fetches produce reusable mirror tarballs ---
+BB_GENERATEMIRRORTARBALLS = "1"
+
+# --- Shared source mirror (fetch sources once, reuse everywhere) -----------------
+# Point SOURCE_MIRROR_URL at a shared store (NFS/HTTP/file://) populated with the
+# download artifacts. own-mirrors makes BitBake check it (a PREMIRROR) before upstream.
+#
+#   SOURCE_MIRROR_URL ?= "file:///path/to/shared/yocto-mirror/downloads"
+#   INHERIT += "own-mirrors"
+#
+# To build fully offline from the mirror only (no upstream fetches):
+#   BB_FETCH_PREMIRRORONLY = "1"
+#   BB_NO_NETWORK = "1"
+
+# --- Disk hygiene (optional): reclaim per-recipe work dirs after each recipe ------
+# INHERIT += "rm_work"

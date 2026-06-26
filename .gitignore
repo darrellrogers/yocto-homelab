@@ -1,0 +1,9 @@
+# Yocto build outputs / caches — never commit these
+poky/
+build/
+downloads/
+sstate-cache/
+tmp/
+*.log
+*.lock
+.writetest
