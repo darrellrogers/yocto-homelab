@@ -38,6 +38,14 @@ sudo locale-gen en_US.UTF-8
 
 ---
 
+## 📚 New to Yocto?
+
+Start with the hands-on **[training guide → `TRAINING.md`](TRAINING.md)** — verified labs
+covering the build/boot loop, custom layers, writing recipes, `.bbappend`s, `devtool`, and
+debugging, all run on this setup.
+
+---
+
 ## Quick start
 
 ```bash
